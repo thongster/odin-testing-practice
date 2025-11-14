@@ -9,5 +9,8 @@ function capitalize(string) {
     return newString
 }
 
-console.log(capitalize("you are gae"))
-export {capitalize}
+function reverseString(string) {
+
+};
+
+export {capitalize, reverseString}

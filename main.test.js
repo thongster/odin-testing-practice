@@ -24,3 +24,4 @@ test('Capitalize first letter of string', () => {
 test('Capitalize first letter of string', () => {
   expect(capitalize("123")).toBe("123");
 });
+
