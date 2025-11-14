@@ -21,16 +21,28 @@ function reverseString(string) {
 
 const calculator = {
   add(a, b) {
-    return 3;
+    if (typeof a != "number" || typeof b != "number") {
+        throw new Error('input must be a number')
+    }
+    return a + b;
   },
   subtract(a, b) {
-    return 5;
+    if (typeof a != "number" || typeof b != "number") {
+        throw new Error('input must be a number')
+    }
+    return a - b;
   },
   multiply(a, b) {
-    return 10;
+    if (typeof a != "number" || typeof b != "number") {
+        throw new Error('input must be a number')
+    }
+    return a * b;
   },
   divide(a, b) {
-    return 2;
+    if (typeof a != "number" || typeof b != "number") {
+        throw new Error('input must be a number')
+    }
+    return a / b;
   },
 };
 

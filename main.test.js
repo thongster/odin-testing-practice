@@ -58,3 +58,9 @@ test('Multiply two numbers', () => {
 test('Divide two numbers', () => {
   expect(calculator.divide(8, 4)).toBe(2);
 });
+
+test('Add two strings', () => {
+  expect( () => calculator.add("123", "this")).toThrow();
+  (3);
+});
+
