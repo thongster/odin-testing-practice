@@ -1,4 +1,4 @@
-import { capitalize, reverseString } from './main.js';
+import { capitalize, reverseString, calculator } from './main.js';
 
 // tests for capitalize
 test('Capitalize first letter of string', () => {
@@ -40,4 +40,21 @@ test('Reverse a string', () => {
 
 test('Reverse a string', () => {
   expect(reverseString('')).toBe('');
+});
+
+// tests for calculator object
+test('Add two numbers', () => {
+  expect(calculator.add(1, 2)).toBe(3);
+});
+
+test('Subtract two numbers', () => {
+  expect(calculator.subtract(7, 2)).toBe(5);
+});
+
+test('Multiply two numbers', () => {
+  expect(calculator.multiply(2, 5)).toBe(10);
+});
+
+test('Divide two numbers', () => {
+  expect(calculator.divide(8, 4)).toBe(2);
 });

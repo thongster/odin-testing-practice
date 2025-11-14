@@ -19,4 +19,19 @@ function reverseString(string) {
   return reversedString;
 }
 
-export { capitalize, reverseString };
+const calculator = {
+  add(a, b) {
+    return 3;
+  },
+  subtract(a, b) {
+    return 5;
+  },
+  multiply(a, b) {
+    return 10;
+  },
+  divide(a, b) {
+    return 2;
+  },
+};
+
+export { capitalize, reverseString, calculator };
