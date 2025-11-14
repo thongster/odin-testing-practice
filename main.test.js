@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator } from './main.js';
+import { capitalize, reverseString, calculator, caesarCipher } from './main.js';
 
 // tests for capitalize
 test('Capitalize first letter of string', () => {
@@ -60,7 +60,24 @@ test('Divide two numbers', () => {
 });
 
 test('Add two strings', () => {
-  expect( () => calculator.add("123", "this")).toThrow();
-  (3);
+  expect(() => calculator.add('123', 'this')).toThrow();
+  3;
 });
 
+// test caesarCipher functions
+
+test('Caesar Cipher normal test', () => {
+  expect(caesarCipher('abc', 3)).toBe('def');
+});
+
+test('Caesar Cipher wrap z to a test', () => {
+  expect(caesarCipher('xyz', 3)).toBe('abc');
+});
+
+test('Caesar Cipher case preservation test', () => {
+  expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
+});
+
+test('Caesar Cipher punctuation preservation test', () => {
+  expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+});

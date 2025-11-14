@@ -21,29 +21,56 @@ function reverseString(string) {
 
 const calculator = {
   add(a, b) {
-    if (typeof a != "number" || typeof b != "number") {
-        throw new Error('input must be a number')
+    if (typeof a != 'number' || typeof b != 'number') {
+      throw new Error('input must be a number');
     }
     return a + b;
   },
   subtract(a, b) {
-    if (typeof a != "number" || typeof b != "number") {
-        throw new Error('input must be a number')
+    if (typeof a != 'number' || typeof b != 'number') {
+      throw new Error('input must be a number');
     }
     return a - b;
   },
   multiply(a, b) {
-    if (typeof a != "number" || typeof b != "number") {
-        throw new Error('input must be a number')
+    if (typeof a != 'number' || typeof b != 'number') {
+      throw new Error('input must be a number');
     }
     return a * b;
   },
   divide(a, b) {
-    if (typeof a != "number" || typeof b != "number") {
-        throw new Error('input must be a number')
+    if (typeof a != 'number' || typeof b != 'number') {
+      throw new Error('input must be a number');
     }
     return a / b;
   },
 };
 
-export { capitalize, reverseString, calculator };
+function caesarCipher(string, key) {
+  let stringArray = string.split('');
+  let newStringArray = [];
+
+  stringArray.forEach((char) => {
+    let asciiChar = char.charCodeAt(0);
+    if (asciiChar >= 97 && asciiChar <= 122) {
+      asciiChar = asciiChar + key;
+      if (asciiChar > 122) {
+        asciiChar = asciiChar - 26;
+      }
+    } else if (asciiChar >= 65 && asciiChar <= 90) {
+      asciiChar = asciiChar + key;
+      if (asciiChar > 90) {
+        asciiChar = asciiChar - 26;
+      }
+    }
+    newStringArray.push(asciiChar);
+  });
+
+  newStringArray.forEach((char, index) => {
+    newStringArray[index] = String.fromCharCode(char);
+  });
+
+  return newStringArray.join('');
+}
+
+export { capitalize, reverseString, calculator, caesarCipher };
